@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script src="./home.js"></script>
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@<version>/build/three.module.js"
+    }
+  }
+</script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <canvas id="bg"></canvas>
+    <main>
+      <ul class="media-nav">
+        <a href="https://www.instagram.com/snickers983/" onclick="return confirm('Would you like to open this webpage? This will be opened in another tab.')" target="_blank"><li><img src="./images/white-insta.png" class="img1" /></li></a>
+        <a href="https://www.linkedin.com/in/jeffrey-wang-904776236/" onclick="return confirm('Would you like to open this webpage? This will be opened in another tab.')" target="_blank"><li><img src="./images/white-linkedin.png" class="img2" /></li></a>
+        <a href="https://www.facebook.com/jeffrey.wang.5059/" onclick="return confirm('Would you like to open this webpage? This will be opened in another tab.')" target="_blank"><li><img src="./images/white-facebook.png" class="img3"/></li></a>
+      </ul>
+      <header id="head">
+        <h1 id="header">Jeffrey Wang Webpage</h1>
+      
+      </header>
+      <br>
+      <div id="resume">
+        <a id="resume-button" href="./pdf/Resume.pdf" onclick="return confirm('Would you like to open this file? This will be opened in another tab.')" target="_blank">Resume</a>
+      </div>
+      <div class="section">
+        <img src="./face-img.jpg" alt="my face" id="face">
+        <div class="content">
+          <h2 class="title">Who am I</h2>
+          <p>
+            As a passionate information technology student I enjoy making new things such as voice recognition Python programs and Flask APIs. 
+            Starting my post-secondary life at SFU studying criminology, I did not enjoy the long hours of theory and book reading. 
+            My initial trajectory was to become a police officer, a person that would follow the law and bring justice to people who did not. 
+            The long lecture and class hours with Powerpoints and discussions with no actual hands-on experience made my expience lacking. 
+            I was not engaged when participating in class which made it difficult to enjoy learning and keep important information in my head.
+            <br><br> 
+            Thoughtout my highschool and post-secondary years, I found that I enjoyed building things with my hands, such as my favorite hobbies Gunpla and model kits. 
+            I was able to be myself while creating battle scenarios and dioramas and I was able to make projects to my liking. 
+            This fueled my passion for IT, as it was a way for me to create un-imaginable projects with un-limited capability only limited to what was on my mind. 
+            I decided to take a Computer Science Course during my final term at SFU. That's where I fell in love with coding, especially in Python.
+            
+            <span id="collapse">
+                <br><br>
+                I decided to go to the British Columbia Institute of Technology (BCIT) to pursue my creative career as an IT professional. 
+                Not only have I gained knowledge about many programming languages and technologies such as Python, HTML, CSS, Javascript, and MySQL. 
+                I have also met many friends and fellow creative minds that have expanded my learning at BCIT.
+                <br><br>BCIT has taught my many things not only about the world of Information Technology, but also myself.
+                I was able to learn many coding tools such as React, and Typescript, but also learning about the ethical impacts of IT and the business part of it.
+                <br><br>
+                With my new trajectory towards the IT sector, I am able to use my creativity to make the world better.
+                Stiving to positively impact our world, I believe I can make a difference.
+            </span>
+            <br><br>
+            <button id="button" onclick="myFunction()">View More</button>
+          </p>
+        </div>
+      </div>
+
+      <div class="full-grid">
+        <h1 id="projects">Projects</h1>
+        <div class="left-grid">
+          
+          
+          <div class="project">
+            <h3>CRUD Employee Management System</h3>
+            <a href="https://cubetech-jwang-emp-database.herokuapp.com/">View Application</a>
+            <p>This CRUD project was created in a agile method with a group of students. As a product owner, I had to keep track and create user stories our project had. In addition, I was the main Flask API programmer in the group.
+              Using an Object Orientated Method to create classes, we designed an application that kept track of Employees within a business. 
+              <span id="collapse-p1" style="display: none;">
+                <br><br>
+                With a group of 5 and within 5 weeks, we were able to create an application that allowed employees to be added, edited and deleted within a business.
+                We stored this data using JSON, which I was most experience in, this allowed us to focus on instead of learning new technologies, to find new strategies to improve our skills.
+                My primary focus on this CRUD application was to make sure that I was able to make this application as realistic as possible, such as encrypting sensitive data, and routing pages with an API.
+                <br><br>
+                Not only could a single business use the application, but multiple businesses could use this application with Logins containing encryped passwords. Using hashlib, I was able to encryp passwords to make them safe and secure.
+                By storing each businesses/companies data within multiple separate json files, our application could retrieve the corrent information based on the login data. 
+                To secure this data, our application used sessions to store session information to store a cache if the user wanted to use a new tab without logging back in.
+                In addition, sessions allowed us to keep track of which information was needed to be shown. If the application was logged out, the session would end, and new credentials would have to be entered again to keep security. 
+                <br><br>
+            </span>
+            <br><br>
+            <button id="button-p1" onclick="expandProject1()">View More</button>
+            </p>
+          </div>
+          
+        </div>
+        <div class="right-grid">
+          <img src="./images/crud-home.png" alt="crud-home" class="crud-img">
+          <img src="./images/crud-view.png" alt="crud-view" class="crud-img" id="crud-view">
+        </div>
+        <br><br>
+        
+        <div class="left-grid">
+          <img src="./images/hangman.png" alt="crud-home" class="crud-img">
+          <img src="./images/tic-tac.png" alt="crud-view" class="crud-img" id="tic-view">
+        </div>
+        <div class="right-grid">
+          <div class="project">
+            <h3>JavaScript Minigames</h3>
+            <a href="https://jwang-js-hangman.herokuapp.com/">View Application</a>
+            <p>This CRUD project was created in a agile method with a group of students. As a product owner, I had to keep track and create user stories our project had. In addition, I was the main Flask API programmer in the group.
+              Using an Object Orientated Method to create classes, we designed an application that kept track of Employees within a business. 
+              <span id="collapse-p2" style="display: none;">
+                <br><br>
+                With a group of 5 and within 5 weeks, we were able to create an application that allowed employees to be added, edited and deleted within a business.
+                We stored this data using JSON, which I was most experience in, this allowed us to focus on instead of learning new technologies, to find new strategies to improve our skills.
+                My primary focus on this CRUD application was to make sure that I was able to make this application as realistic as possible, such as encrypting sensitive data, and routing pages with an API.
+                <br><br>
+                Not only could a single business use the application, but multiple businesses could use this application with Logins containing encryped passwords. Using hashlib, I was able to encryp passwords to make them safe and secure.
+                By storing each businesses/companies data within multiple separate json files, our application could retrieve the corrent information based on the login data. 
+                To secure this data, our application used sessions to store session information to store a cache if the user wanted to use a new tab without logging back in.
+                In addition, sessions allowed us to keep track of which information was needed to be shown. If the application was logged out, the session would end, and new credentials would have to be entered again to keep security. 
+                <br><br>
+            </span>
+            <br><br>
+            <button id="button-p2" onclick="expandProject2()">View More</button>
+            </p>
+          </div>
+          
+        </div>
+      </div>
+
+
+      
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  
+    <script src="resources/threejs/r105/js/controls/OrbitControls.js"></script>
+    
+
+  </body>
+</html>

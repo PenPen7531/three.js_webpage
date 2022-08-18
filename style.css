@@ -1,0 +1,232 @@
+canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+:root{
+  max-width: 100%;
+  font-size: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main{
+  margin: 0px, auto;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  position: absolute;
+  color: white;
+  width: 100vw;
+}
+
+header{
+  margin-top: 25%;
+  grid-column: 6/ span 8;
+  padding: 10px;
+  
+}
+
+.section{
+  
+  grid-column: 1/ -1;
+  padding: 30px;
+  
+  margin-top: 30%;
+  display: flex;
+
+
+}
+
+.title{
+  align-self: center;
+}
+
+#head{
+  display: block;
+}
+
+#header{
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px white;
+  padding: 20px;
+  display:inline;
+  z-index: -1;
+  border-radius: 10px;
+
+}
+
+p{
+  
+  font-size: 0.5em;
+}
+
+#collapse{
+  display: none;
+}
+
+
+#face{
+  margin-right: 2.5%;
+  align-self: flex-start;
+  margin-left: 2.5%;
+  align-self: center;
+  box-shadow: 0px 0px 50px purple;
+  width: 40vw;
+  border-radius: 25px;
+
+}
+
+.content{
+  justify-self: flex-end;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 50px white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 50px;
+}
+
+.img1, .img2, .img3{
+  width: 30px;
+}
+
+.collapse-p1{
+  display: none;
+}
+
+#crud-view{
+  display:none;
+}
+
+
+.media-nav{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  grid-column: 1 / span 18;
+}
+
+.full-grid{
+  margin-top: 35%;
+  grid-column: 1/ span 18;
+  background-color: rgba(0,0,0,0.5);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+}
+
+.left-grid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 1/ span 8;
+  padding-left: 2.5%;
+}
+
+.right-grid{
+  grid-column: 9 / span 16;
+}
+
+.crud-img{
+  margin: 10px;
+  border-radius: 10px;
+  width: 90%;
+}
+
+#tic-view{
+  display: none;
+}
+
+#projects{
+  grid-column: 7/ span 16;
+}
+a{
+  text-decoration: none;
+  display: inline;
+  color: white;
+}
+#resume{
+  
+  display: inline;
+  margin-top: 50px;
+  grid-column: 9 / span 10;
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  
+}
+
+
+@keyframes glow{
+  0%{
+    box-shadow: 0 0 2px white;
+  }
+  5%{
+    box-shadow: 0 0 2.5px white;
+  }
+  10%{
+    box-shadow: 0 0 3px white;
+  }
+  15%{
+    box-shadow: 0 0 5px white;
+  }
+  20%{
+    box-shadow: 0 0 8px white;
+  }
+  25%{
+    box-shadow: 0 0 10px white;
+  }
+  30%{
+    box-shadow: 0 0 12.5px white;
+  }
+  35%{
+    box-shadow: 0 0 15px white;
+  }
+  40%{
+    box-shadow: 0 0 17.5px white;
+  }
+  50%{
+    box-shadow: 0 0 20px white;
+  }
+  60%{
+    box-shadow: 0 0 17.5px white;
+  }
+  65%{
+    box-shadow: 0 0 15px white;
+  }
+  70%{
+    box-shadow: 0 0 12.5px white;
+  }
+  75%{
+    box-shadow: 0 0 10px white;
+  }
+  80%{
+    box-shadow: 0 0 8px white;
+  }
+  85%{
+    box-shadow: 0 0 5px white;
+  }
+  90%{
+    box-shadow: 0 0 3px white;
+  }
+  95%{
+    box-shadow: 0 0 2.5px white;
+  }
+  100%{
+    box-shadow: 0 0 2px white;
+  }
+}
+#resume-button{
+  display: inline;
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 2px white;
+  
+}
+
+
+#resume-button:hover{
+  color: white;
+  animation: glow 2000ms infinite;
+}

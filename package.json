@@ -1,0 +1,27 @@
+{
+  "name": "3js_project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^3.0.7"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "require": "^0.4.4",
+    "three": "^0.143.0"
+  },
+  "engines": {
+    "node": "16.13.2"
+  },
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
