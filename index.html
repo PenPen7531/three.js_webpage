@@ -7,7 +7,7 @@
     <title>Vite App</title>
     <script src="./home.js"></script>
     <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script type="importmap">
   {
     "imports": {
@@ -21,9 +21,12 @@
     <canvas id="bg"></canvas>
     <main>
       <ul class="media-nav">
+
+        <a href="https://github.com/PenPen7531" onclick="return confirm('Would you like to open this webpage? This will be opened in another tab.')" target="_blank"><li><img src="./images/white-github.png" class="img1" /></li></a>
         <a href="https://www.instagram.com/snickers983/" onclick="return confirm('Would you like to open this webpage? This will be opened in another tab.')" target="_blank"><li><img src="./images/white-insta.png" class="img1" /></li></a>
         <a href="https://www.linkedin.com/in/jeffrey-wang-904776236/" onclick="return confirm('Would you like to open this webpage? This will be opened in another tab.')" target="_blank"><li><img src="./images/white-linkedin.png" class="img2" /></li></a>
         <a href="https://www.facebook.com/jeffrey.wang.5059/" onclick="return confirm('Would you like to open this webpage? This will be opened in another tab.')" target="_blank"><li><img src="./images/white-facebook.png" class="img3"/></li></a>
+        <a href="mailto:jwang536@my.bcit.ca" target="_blank"><li><img src="./images/mail.png" class="img1" /></li></a>
       </ul>
       <header id="head">
         <h1 id="header">Jeffrey Wang Webpage</h1>
@@ -33,7 +36,7 @@
       <div id="resume">
         <a id="resume-button" href="./pdf/Resume.pdf" onclick="return confirm('Would you like to open this file? This will be opened in another tab.')" target="_blank">Resume</a>
       </div>
-      <div class="section">
+      <div class="section" data-aos="fade-up" duration="3000">
         <img src="./face-img.jpg" alt="my face" id="face">
         <div class="content">
           <h2 class="title">Who am I</h2>
@@ -61,19 +64,19 @@
                 Stiving to positively impact our world, I believe I can make a difference.
             </span>
             <br><br>
-            <button id="button" onclick="myFunction()">View More</button>
+            <button id="button" onclick="myFunction()" class="expand">View More</button>
           </p>
         </div>
       </div>
 
-      <div class="full-grid">
-        <h1 id="projects">Projects</h1>
-        <div class="left-grid">
+      <div class="full-grid" data-aos="fade-up">
+        <h1 id="projects">Projects &#128640</h1>
+        <div class="left-grid" data-aos="fade-right">
           
           
-          <div class="project">
-            <h3>CRUD Employee Management System</h3>
-            <a href="https://cubetech-jwang-emp-database.herokuapp.com/">View Application</a>
+          <div class="project" >
+            <h3>CRUD Employee Management System &#128187</h3>
+            <a href="https://cubetech-jwang-emp-database.herokuapp.com/" class="project_link">View Application</a>
             <p>This CRUD project was created in a agile method with a group of students. As a product owner, I had to keep track and create user stories our project had. In addition, I was the main Flask API programmer in the group.
               Using an Object Orientated Method to create classes, we designed an application that kept track of Employees within a business. 
               <span id="collapse-p1" style="display: none;">
@@ -89,55 +92,150 @@
                 <br><br>
             </span>
             <br><br>
-            <button id="button-p1" onclick="expandProject1()">View More</button>
+            <button id="button-p1" onclick="expandProject1()" class="expand">View More</button>
             </p>
           </div>
           
         </div>
-        <div class="right-grid">
-          <img src="./images/crud-home.png" alt="crud-home" class="crud-img">
-          <img src="./images/crud-view.png" alt="crud-view" class="crud-img" id="crud-view">
+        <div class="right-grid" data-aos="fade-left">
+          <img src="./images/crud-home.png" alt="crud-home" class="img">
+          <img src="./images/crud-view.png" alt="crud-view" class="img" id="crud-view">
         </div>
         <br><br>
         
-        <div class="left-grid">
-          <img src="./images/hangman.png" alt="crud-home" class="crud-img">
-          <img src="./images/tic-tac.png" alt="crud-view" class="crud-img" id="tic-view">
+        <div class="left-grid" data-aos="fade-down">
+          <img src="./images/hangman.png" alt="crud-home" class="img">
+          <img src="./images/tic-tac.png" alt="crud-view" class="img" id="tic-view">
         </div>
-        <div class="right-grid">
+        <div class="right-grid" data-aos="fade-down">
           <div class="project">
-            <h3>JavaScript Minigames</h3>
-            <a href="https://jwang-js-hangman.herokuapp.com/">View Application</a>
-            <p>This CRUD project was created in a agile method with a group of students. As a product owner, I had to keep track and create user stories our project had. In addition, I was the main Flask API programmer in the group.
-              Using an Object Orientated Method to create classes, we designed an application that kept track of Employees within a business. 
+            <h3>JavaScript Minigames &#127918</h3>
+            <a href="https://jwang-js-hangman.herokuapp.com/" class="project_link">View Application</a>
+            <p>This game project was my motivation to improve on my JavaScript syntax and my understanding of Javascript. 
+              Most importantly, JavaScript's syntax is very similar to many other languages such as Java and C++.
+              This API serves multiple pages through a Flask API to send multiple games such as Coding Language Hangman, 2 Player Tic-Tac-Toe, and guess the RGB Colour Code. 
+              I learned new methods in JS such as the keydown eventlistener, which allowed me to record keyboard inputs for hangman.
               <span id="collapse-p2" style="display: none;">
                 <br><br>
-                With a group of 5 and within 5 weeks, we were able to create an application that allowed employees to be added, edited and deleted within a business.
-                We stored this data using JSON, which I was most experience in, this allowed us to focus on instead of learning new technologies, to find new strategies to improve our skills.
-                My primary focus on this CRUD application was to make sure that I was able to make this application as realistic as possible, such as encrypting sensitive data, and routing pages with an API.
+                By using a familiar Flask Python API, I was able to focus my work on creating an organized, but also functional code that allows games to be played multiple times with a click of a restart button. 
+                Not only was I able to improve my Javascript techniques, such as using while and for loops, but I was able to understand more about onclick and eventlisteners. 
+                Splitting my code into smaller functions allowed me to understand my code better, but also allowed me to fix bugs and issues related to certain functions faster, since everything was more organized.
                 <br><br>
-                Not only could a single business use the application, but multiple businesses could use this application with Logins containing encryped passwords. Using hashlib, I was able to encryp passwords to make them safe and secure.
-                By storing each businesses/companies data within multiple separate json files, our application could retrieve the corrent information based on the login data. 
-                To secure this data, our application used sessions to store session information to store a cache if the user wanted to use a new tab without logging back in.
-                In addition, sessions allowed us to keep track of which information was needed to be shown. If the application was logged out, the session would end, and new credentials would have to be entered again to keep security. 
+                Not only did I improve in JavaScript, but I was able to be more creative and understand CSS and HTML in a better way. I used a new element in HTML called svg's, which allowed me to draw the hangman character as letters were guessed incorrectly.
+                I also improved my understanding of JS DOMs, which allowed me to change elements within an HTML to display inline, block, and to also hide elements with none;
                 <br><br>
             </span>
             <br><br>
-            <button id="button-p2" onclick="expandProject2()">View More</button>
+            <button id="button-p2" onclick="expandProject2()" class="expand">View More</button>
+            </p>
+          </div>
+        </div>
+
+
+
+        <div class="left-grid" data-aos="fade-up">
+          
+          
+          <div class="project">
+            <h3>Java Code Language Guessing Game &#128025</h3>
+            <a href="https://github.com/PenPen7531/java-code-lang-guessing-game" class="project_link">View Github Repo</a>
+            <p>
+              My first Java project was one of the toughest projects I have ever tried. Even without designing a UI, or coding an API, coding fully in Java was the toughest.
+              By using Java, I expanded my knowledge of using OOP and Classes.
+              With the same syntax as JavaScript, it was fairly easy to understand and create code, but using multiple methods was difficult to understand in the beginning.<br><br>
+              <em>Public Static void main string args!</em>
+              <span id="collapse-p3" style="display: none;">
+                <br><br>
+                One of the most difficult challenges in Java was creating methods, having to declare if the method is public, private, and what variable it returns! 
+                Oh man the challenges was making sure to declare the return type value at the start of the method. String? Integer? Boolean? Void?
+                Making sure to declare an object to a class to allow it to use a function was also very difficult.
+                The first few days creating this project was confusing! Realizing that I did not declare an object to a class so it cannot use a method drove me mad!
+                <br><br>
+                At the end, I was proud that I was able to create a OOP project! I realized that Java is still important in many companies, but the rumours are true...Java is hell!
+                <br><br>
+            </span>
+            <br><br>
+            <button id="button-p3" onclick="expandProject3()" class="expand">View More</button>
             </p>
           </div>
           
         </div>
+        <div class="right-grid" data-aos="fade-up">
+          <img src="./images/java_hints.png" alt="java-hints" class="img">
+          <img src="./images/java_rules.png" alt="java-rules" class="img" id="java-rules">
+        </div>
+        <br><br>
+
+
+        <div class="left-grid" data-aos="fade-right">
+          <img src="./images/c++_question.png" alt="c++-question" class="img">
+          <img src="./images/c++_game_over.png" alt="c++ gameover" class="img" id="cpp">
+        </div>
+        <div class="right-grid" data-aos="fade-left">
+          <div class="project">
+            <h3>C++ Game Show &#128178</h3>
+            <a href="https://github.com/PenPen7531/cpp_game_show" class="project_link">View Github Repo</a>
+            <p>
+              To expand my coding language knowledge. I decided to create a C++ game show for the terminal. With the knowledge of the JS syntax, I was able to figure out quickly how to build the code.
+              A challenge I faced was using #include to get modules that I needed to create the program. One feature I wanted to impliment was to use JSON to store the quiz questions.
+              To use this, I had to understand how to get modules from Github, in which I used the nholmann module to get data from JSON.
+              <span id="collapse-p4" style="display: none;">
+              <br><br>
+              Another challenge I faced was the function return value declarations such as Void, String, and Boolen. This was very similar to the Java Project, but without worrying about static, public, and private.
+              Using &lt&lt and >> was fairly unfamiliar to me when printing strings into the terminal, but also to pipe information into variables. Instead of using =, using &lt&lt and >> was interesting.
+          
+            </span>
+            <br><br>
+            <button id="button-p4" onclick="expandProject4()" class="expand">View More</button>
+            </p>
+          </div>
+        </div>
+        
+        <div class="left-grid" data-aos="fade-up">
+          
+          
+          <div class="project">
+            <h3>Python Image Manipulator &#129426</h3>
+            <a href="https://replit.com/@JeffWang6/Jeffrey-Wang-Image-Manipulator-and-Store?v=1" class="project_link">View Replit Page</a>
+            <p>
+              The first Python Project I created. Uses a CVS file to create a nested Python array. Within this nested python array contains RGB color codes which were manipulated to create images.
+              This includes creating original images, greyscale, and can put vertical red lines. By using for loops, I was able to interact through every element within the array and sub arrays. 
+  
+                <br><br>
+                Since this was my first ever major Python project, my biggest challenge was working with sub-arrays and loops to interact with each element. It took some time, as I was only familiar with normal lists.
+                But with some time, I was able to understand the concept of lists in lists! This was not the only challenge. Saving the image onto the system was also a challenge as it was the first time doing this sort of thing.
+                This project took about 3-4 weeks, but at the end, was something to be proud of.
+            
+           
+            </p>
+          </div>
+          
+        </div>
+        <div class="right-grid flex-center" data-aos="fade-up" >
+          <img src="./images/giraffe.jpg" alt="giraffe" class="img" id="giraffe" style="display: inline" onclick="swapPicture()">
+          <img src="./images/grey-scale-giraffe.jpg" alt="greyscale giraffe" class="img" id="grey-giraffe" style="display: none" onclick="swapPictureRed()">
+          <img src="./images/giraffe-red.jpg" alt="red bar giraffe" class="img" id="red-giraffe" style="display: none" onclick="swapPicture()">
+        </div>
+        <br><br>
+
       </div>
 
 
-      
+   
     </main>
 
     <script type="module" src="/main.js"></script>
   
     <script src="resources/threejs/r105/js/controls/OrbitControls.js"></script>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init(
+        {
+          delay: 150,
+          duration: 1000
+        }
+      );
+    </script>
 
   </body>
 </html>

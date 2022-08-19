@@ -39,6 +39,21 @@ sun.position.set(300,175,-350);
 
 scene.add(sun);
 
+
+const faceTexture = new THREE.TextureLoader().load("face-img.jpg");
+
+const face=new THREE.Mesh(
+  new THREE.BoxGeometry(2,2,2),
+  new THREE.MeshBasicMaterial( { map:faceTexture } )
+);
+
+
+scene.add(face);
+
+face.position.x = 2;
+face.position.y = -1;
+
+
 const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(150,80,-100);
 scene.add(pointLight);
@@ -50,7 +65,7 @@ const gridHelper = new THREE.GridHelper(200, 50);
 
 
 
-const controls = new OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls( camera, renderer.domElement );
 
 const cometBackground = new THREE.TextureLoader().load("comet.jpg");
 function addStar(){
@@ -78,7 +93,9 @@ function animate(){
   
   earth.rotation.y+=0.0005;
   sun.rotation.y-=0.007;
-  
+  face.rotation.y+=0.001;
+  face.rotation.x+=0.0002; 
+
 }
 
 
@@ -88,6 +105,8 @@ function move(){
     camera.position.x-=0.02;
     camera.position.y-=0.02;
     camera.position.z+=0.08; 
+    face.position.x-=0.1;
+    face.position.y -= 0.2;
 }
 camera.position.z=4;
 
