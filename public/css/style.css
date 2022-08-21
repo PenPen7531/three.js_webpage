@@ -39,7 +39,7 @@ main{
 }
 
 .project_link:hover{
-  animation: 1500ms glow-neon infinite; 
+  animation: 2500ms glow-neon infinite; 
 
 }
 
@@ -145,9 +145,8 @@ main{
 header{
   margin: 0;
   margin-top: 25%;
-  grid-column: 5/ span 9;
+  grid-column: 6/ span 8;
   padding: 10px;
-  display: flex;
   align-self:center;
   justify-self: center;
   
@@ -171,17 +170,15 @@ header{
 }
 
 #head{
-  display: flex;
-  justify-content: center;
-  z-index: 100;
+  display: block;
 }
 
 #header{
   background-color: rgba(0,0,0,0.5);
   box-shadow: 0px 0px 10px white;
   padding: 20px;
-  display:absolute;
- 
+  display:inline;
+  z-index: -1;
   border-radius: 10px;
 
 }
@@ -278,15 +275,12 @@ p{
   border-radius: 10px;
 
 }
-
 .img1:hover, .img2:hover, .img3:hover{
 
   animation: popup 750ms ease-in infinite;
 
   
 }
-
-
 
 @keyframes popup {
   0%{
@@ -391,23 +385,10 @@ p{
   align-items: center;
   grid-column: 1/ span 8;
   padding-left: 2.5%;
-  padding-bottom: 5%;
 }
 
-.left{
-  justify-self: flex-start;
-  align-self: flex-start;
-  padding-right: 100px;
-}
-
-
-.hobbies{
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-}
 .right-grid{
   grid-column: 9 / span 16;
-  padding-bottom: 5%;
 }
 
 .img{
@@ -420,10 +401,7 @@ p{
   display: none;
 }
 
-
-
 #projects{
-  margin-top: 10%;
   grid-column: 7/ span 16;
   align-self: center;
   
@@ -434,32 +412,16 @@ a{
   display: inline;
   color: white;
 }
-#resume-container{
+#resume{
   
-  display: flex;
-  justify-content: space-evenly;
+  display: inline;
   margin-top: 50px;
-  grid-column-start: 1;
-  grid-column-end: 18;
+  grid-column: 9 / span 10;
   list-style-type: none;
   text-decoration: none;
   color: white;
   
   
-}
-
-
-
-/* .resume-block{
-  width: 100%;
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-#resume-grid, #resume-full{
-  grid-column: 2/span 3;
 }
 
 .project{
@@ -468,8 +430,6 @@ a{
   justify-content: center;
   align-items: center;
 }
-
-
 
 
 @keyframes glow{
@@ -532,8 +492,6 @@ a{
   }
 }
 #resume-button{
-  align-self: center;
-  justify-self: center;
   display: inline;
   background-color: rgba(0,0,0,0.5);
   padding: 20px;
@@ -610,67 +568,4 @@ a{
     animation-play-state: paused;
     background: linear-gradient(to right, #7649fe, #7649fe, #7649fe, #7649fe, #7649fe, #7649fe, #7649fe, #7649fe, #7649fe, #7649fe, #7649fe,#7649fe,#7649fe, #7649fe, #7649fe, #7649fe, #7649fe, #7649fe, #7649fe);
   }
-}
-
-#hobby-title{
-  grid-column: 7/ span 8;
-  align-self: center;
-}
-
-.hobbies{
-  padding-top: 5%;
-}
-
-.gundam-img{
-  width: 49%;
-  padding-left: 0%;
-  padding-right: 0%;
-  border-radius: 30px;
-}
-
-.car-img{
-  
-  width: 90%;
-  padding: 5%;
-  margin: 0%;
-  border-radius: 100px;
-
-}
-
-
-
-#benny, #bobby{
-  width: 45%;
-  padding: 0%;
-
-}
-
-#pet-container{
-  display: flex;
-  flex-direction: row;
-
-}
-#car-photo-container{
-  display: flex;
-  flex-direction: column;
-  padding: 0%;
-  justify-content: center;
-  padding-bottom: 0%;
-  
-}
-
-.center{
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }

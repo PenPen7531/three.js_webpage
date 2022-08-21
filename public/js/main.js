@@ -15,7 +15,7 @@ renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
 
 renderer.render(scene, camera);
-const moonTexture = new THREE.TextureLoader().load("./images/moon.jpg");
+const moonTexture = new THREE.TextureLoader().load("moon.jpg");
 const geometry = new THREE.SphereGeometry(5, 32,32);
 const material = new THREE.MeshStandardMaterial( {map: moonTexture} );
 const moon = new THREE.Mesh(geometry, material);
@@ -23,7 +23,7 @@ moon.position.set(-175,50,-125);
 
 scene.add(moon);
 
-const earthTexture = new THREE.TextureLoader().load("./images/earth.jpg");
+const earthTexture = new THREE.TextureLoader().load("earth.jpg");
 const earth_geometry = new THREE.SphereGeometry(100, 32,32);
 const earth_material = new THREE.MeshStandardMaterial( {map: earthTexture} );
 const earth = new THREE.Mesh(earth_geometry, earth_material);
@@ -31,7 +31,7 @@ earth.position.set(-50,0,-175);
 
 scene.add(earth);
 
-const sunTexture = new THREE.TextureLoader().load("./images/sun.jpg");
+const sunTexture = new THREE.TextureLoader().load("sun.jpg");
 const sun_geometry = new THREE.SphereGeometry(15, 32,32);
 const sun_material = new THREE.MeshStandardMaterial( {map: sunTexture} );
 const sun = new THREE.Mesh(sun_geometry, sun_material);
@@ -40,7 +40,7 @@ sun.position.set(300,175,-350);
 scene.add(sun);
 
 
-const faceTexture = new THREE.TextureLoader().load("./images/face-img.jpg");
+const faceTexture = new THREE.TextureLoader().load("face-img.jpg");
 
 const face=new THREE.Mesh(
   new THREE.BoxGeometry(2,2,2),
@@ -67,7 +67,7 @@ const gridHelper = new THREE.GridHelper(200, 50);
 
 const controls = new OrbitControls( camera, renderer.domElement );
 
-const cometBackground = new THREE.TextureLoader().load("./images/comet.jpg");
+const cometBackground = new THREE.TextureLoader().load("comet.jpg");
 function addStar(){
   const geometry = new THREE.SphereGeometry(0.50, 5, 5);
   const material = new THREE.MeshStandardMaterial( { map: cometBackground });
@@ -80,7 +80,7 @@ function addStar(){
 
 Array(200).fill().forEach(addStar);
 
-const spaceBackground = new THREE.TextureLoader().load("./images/space.jpg");
+const spaceBackground = new THREE.TextureLoader().load("space.jpg");
 scene.background = spaceBackground;
 
 function animate(){

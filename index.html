@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script src="./home.js"></script>
+    <script src="./js/home.js"></script>
     <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script type="importmap">
@@ -21,7 +21,6 @@
     <canvas id="bg"></canvas>
     <main>
       <ul class="media-nav">
-
         <a href="https://github.com/PenPen7531" onclick="return confirm('Would you like to open this webpage? This will be opened in another tab.')" target="_blank"><li><img src="./images/white-github.png" class="img1" /></li></a>
         <a href="https://www.instagram.com/snickers983/" onclick="return confirm('Would you like to open this webpage? This will be opened in another tab.')" target="_blank"><li><img src="./images/white-insta.png" class="img1" /></li></a>
         <a href="https://www.linkedin.com/in/jeffrey-wang-904776236/" onclick="return confirm('Would you like to open this webpage? This will be opened in another tab.')" target="_blank"><li><img src="./images/white-linkedin.png" class="img2" /></li></a>
@@ -29,17 +28,24 @@
         <a href="mailto:jwang536@my.bcit.ca" target="_blank"><li><img src="./images/mail.png" class="img1" /></li></a>
       </ul>
       <header id="head">
-        <h1 id="header">Jeffrey Wang Webpage</h1>
-      
+        <h1 id="header">The Life of Jeff</h1>
       </header>
       <br>
-      <div id="resume">
-        <a id="resume-button" href="./pdf/Resume.pdf" onclick="return confirm('Would you like to open this file? This will be opened in another tab.')" target="_blank">Resume</a>
+
+      <!-- Resume Button -->
+      <div id="resume-container"> 
+        <a id="resume-button" href="#about-me">About</a>
+        <a id="resume-button" href="#projects">Projects</a>
+        <a id="resume-button" href="#hobbies">Passions</a>
+        <a id="resume-button" href="#resume">Resume</a>
+        <a id="resume-button" href="./images/resume.png" download>Download</a>
       </div>
-      <div class="section" data-aos="fade-up" duration="3000">
-        <img src="./face-img.jpg" alt="my face" id="face">
+
+      <!-- About Me  -->
+      <div class="section" data-aos="fade-up" duration="3000" id="about-me">
+        <img src="./images/face-img.jpg" alt="my face" id="face">
         <div class="content">
-          <h2 class="title">Who am I</h2>
+          <h1 class="title">Who am I</h1>
           <p>
             As a passionate information technology student I enjoy making new things such as voice recognition Python programs and Flask APIs. 
             Starting my post-secondary life at SFU studying criminology, I did not enjoy the long hours of theory and book reading. 
@@ -192,8 +198,6 @@
         </div>
         
         <div class="left-grid" data-aos="fade-up">
-          
-          
           <div class="project">
             <h3>Python Image Manipulator &#129426</h3>
             <a href="https://replit.com/@JeffWang6/Jeffrey-Wang-Image-Manipulator-and-Store?v=1" class="project_link">View Replit Page</a>
@@ -217,12 +221,96 @@
           <img src="./images/giraffe-red.jpg" alt="red bar giraffe" class="img" id="red-giraffe" style="display: none" onclick="swapPicture()">
         </div>
         <br><br>
-
       </div>
 
 
-   
+      <!-- Hobbies -->
+      <div class="hobbies full-grid" data-aos="fade-up-right" id="hobbies">
+        <h1 id="hobby-title">Passions 🤖</h1>
+        
+        <div class="left-grid center">
+          <h3>Model Kits</h3>
+          <p class="left">
+            In grade 10, I was introduced to Gunpla, plastic model kits based off the Gundam Anime Robot Series. 
+            Thoughtout the years, I have expanded from Gunpla into model planes, cars, and other figures. Based on the size and complexity of the model, it may take a few hours to a few weeks to fully complete one model.
+            
+            <br><br>
+            To challenge myself, I learned how to airbrush and spray paint model kits to change their color, and I have also learned how to use weathering tools to make these model kits look more realistic.
+            In addition, using tools such as hand-held drills and blades has allowed me to create realistic bullet holes and cracks in my models. 
+            <br><br>
+            Model kits has allowed me to practice patients when facing challenges, dedication, and creativity.
+          </p>
+        </div>
+        <div class="right-grid">
+          <img src="./images/exia.jpg" class="gundam-img" alt="exia">
+          <img src="./images/zaku-weather.jpg" class="gundam-img" alt="zaku">
+          
+        </div>
+        <div class="left-grid" id="car-photo-container">
+          <img src="./images/frs-back.jpg" alt="frs photoshopped" class="car-img">
+          <!-- <img src="./images/frs-harrison.jpg" alt="car group" class="car-img"> -->
+        </div>
+        <div class="right-grid center">
+          <h3>Cars</h3>
+          <p class="left">
+            Driving and working with cars has taught me how to problem solve, but also planning and organization skills.
+            There are many issues that can arise when modifying and driving cars, such as mechanical issues. 
+            These issues can sometimes be challenging to solve, finding solutions to fix a problem or finding solutions to prevent the problem from happening.
+            <br><br>
+            Especially during Covid-19, gas prices have risen and it's now expensive to drive. 
+            This has helped me build my planning skills, reducing the amount of trips and milage I need to drive, taking shorter routes, and routing my day to achieve multiple goals and places without wasting gas.
+          </p>
+          
+        </div>
+
+
+        <div class="left-grid center">
+          <h3>Pets</h3>
+          <p class="left">
+            As a proud formal member of the Pinetree Secondary SCPA Club, I have had a life-long passion to care and love animals. From going to the SPCA Summer Camp, to donating to the SPCA, pets and animals have been very important in my life.
+            I have personally owned a few pets, such as a guinepig named Chubby, a hermet crab, and an upside down goldfish named Bubbles.
+            <br><br>
+            Benny (Image on the Left), is a funny, yet friendly pomeranian who has been in my life since 2020. A little crazy, he enjoys licking and chasing people on bikes! 
+            He has taught me personally that having fun, taking breaks, and relaxing can be beneficial mentally. 
+            <br><br>
+            Bobby (Image on the Right), is a calm, relaxing, dedicated and trustworthy pomeranian who was in my entire life since 2019. He was loyal and would always be by the side of who he loves. He enjoyed walking around Stanley Park and walking around Lafarge Lake, eating cheese sandwiches in the morning.
+            <br><br>
+            Pet's take a lot of effort to take care of. Cleaning cages, picking up their waste, spending time with them, feeding them. It all takes work and effort, but pets also bring unexpected joy into your life. 
+          </p>
+        </div>
+        <div class="right-grid center" id="pet-container">
+          <img src="./images/benny-park.jpg" id="benny">
+          <img src="./images/bobby-bday.jpg" id="bobby">
+          
+        </div>
+        
+        
+        
+      </div>
+
+      <div class="full-grid flex" data-aos="fade-up" duration="3000">
+        <h1>Resume</h1>
+        <img src="./images/resume.png" alt="Resume" id="resume">
+        
+      </div>
+
+
+     
+    
+     
+    
     </main>
+
+
+
+
+
+
+
+
+
+
+
 
     <script type="module" src="/main.js"></script>
   
@@ -231,7 +319,7 @@
     <script>
       AOS.init(
         {
-          delay: 150,
+          delay: 50,
           duration: 1000
         }
       );
