@@ -286,7 +286,9 @@ p{
   
 }
 
-
+p{
+  line-height: 25px;
+}
 
 @keyframes popup {
   0%{
